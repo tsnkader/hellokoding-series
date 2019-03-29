@@ -1,0 +1,33 @@
+  <!--<ol>
+  <li>
+   <mat-form-field>
+      <input style="border:1px solid blue" matInput [(ngModel)]="lastName" >
+      <input style="border:1px solid blue" matInput [(ngModel)]="animal" placeholder="What's your name?">
+    </mat-form-field>
+  </li> 
+  <li>
+    <button mat-raised-button (click)="openDialog()">Requestor</button>
+  </li>-->
+  <button mat-raised-button (click)="openDialog()">Requestor</button>
+  <!-- <li *ngIf="animal">
+    You chose: <i>{{animal}}</i>
+  </li> -->
+ <!-- </ol>-->
+<table>
+  <thead>
+    <th>FirstName</th>
+    <th>LastName</th>
+    
+  </thead>
+  <tbody>
+    <tr *ngFor="let a of animals">
+      <td style="border:1px solid blue">{{a.animal}}</td>
+      <td style="border:1px solid blue">{{a.lastName}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<!-- Copyright 2019 Google Inc. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at http://angular.io/license -->
