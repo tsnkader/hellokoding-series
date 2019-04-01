@@ -1,259 +1,237 @@
-<div class="container">
-  <h2></h2>
-  <ul class="nav nav-tabs">
-    <li><a href="#home">XE Service</a></li>
-    <li class="active"><a href="#menu1">XE Provider</a></li>
-    <li><a href="#menu2">XE Service</a></li>
-  </ul>
 
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <div class="col-sm-2">
-        <h3>Column 3</h3>
+<div class="container-fluid">
+  <ngb-tabset>
+    <ngb-tab>
+      <ng-template ngbTabTitle><b>XE Provider</b></ng-template>
 
 
-      </div>
+
+      <ng-template ngbTabContent>
+
+          <div class="tab-content">
+          <div class="row">
+              <div class="col-sm-4" style="background-color:lavender;">
+style1
+              </div>
 
 
-      <div class="col-sm-5">
 
-        <h3>Provider Configuration</h3>
-        <div class="form-group">
-          <label for="providername">Provider Name</label>
-          <input type="text" id="providername" name="providername" class="form-control ">
-        </div>
-        <div class="form-group">
-          <label for="ReqId">Req Id</label>
-          <input type="text" id="ReqId" name="ReqId" class="form-control ">
-        </div>
-        <div class="form-group">
-          <label for="Type">Type</label>
-          <input type="text" id="Type" name="Type" class="form-control ">
-        </div>
-        <div class="form-group">
-          <label for="singleDomain">Single Domain:</label>
-          <input type="text" id="singleDomain" name="singleDomain" class="form-control ">
-        </div>
-        <input type="checkbox" name="gender" value="male"> <label for="singleDomain">Filter Empty Domain</label>
-        <input type="checkbox" name="gender" value="male" checked> <label for="singleDomain">Multi Domain Supported</label><br>
+              <div class="col-sm-4" style="background-color:lavenderblush;">
+                  
+                      <p><b>Provider Configuration</b></p>
+                      <div class="form-group">
+                        <label for="providername">Provider Name</label>
+                        <input type="text" id="providername" name="providername" class="form-control ">
+                      </div>
+                      <div class="form-group">
+                        <label for="ReqId">Req Id</label>
+                        <input type="text" id="ReqId" name="ReqId" class="form-control ">
+                      </div>
+                      <div class="form-group">
+                        <label for="Type">Type</label>
+                        <input type="text" id="Type" name="Type" class="form-control ">
+                      </div>
+                      <div class="form-group">
+                        <label for="singleDomain">Single Domain:</label>
+                        <input type="text" id="singleDomain" name="singleDomain" class="form-control ">
+                      </div>
+                      <input type="checkbox" name="gender" value="male"> <label for="singleDomain">Filter Empty Domain</label>
+                      <input type="checkbox" name="gender" value="male" checked> <label for="singleDomain">Multi Domain Supported</label><br>
+                      
+                      <div class="form-group">
+                        <label for="supportedDomain">Supported Domain:</label>
+                        <input type="text" id="supportedDomain" name="supportedDomain" class="form-control ">
+                      </div>
+                    
+                  </div>
+              <div class="col-sm-4" style="background-color:lavender;">
         
-        <div class="form-group">
-          <label for="supportedDomain">Supported Domain:</label>
-          <input type="text" id="supportedDomain" name="supportedDomain" class="form-control ">
-        </div>
-        
-      </div>
+                        <p><b>Requestor Configuration</b></p>
+                        <input type="checkbox" name="gender" value="male"> Enable Secure Connection(TLS)
+                        <input type="checkbox" name="gender" value="male" checked> Enable Proxy<br>
+                        <!--     Dialog Box for Requestor
+                        <ng-template #content let-c="close" let-d="dismiss">
+                          <div class="modal-header">
+                            <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
+                            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <p>Hello, World!</p>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
+                          </div>
+                        </ng-template>
+                        <button class="btn btn-primary" (click)="openDialog(content)">Requestor1</button>-->
+                        <ngbd-modal-config></ngbd-modal-config>
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>Requestor Name</th>
+                              <th>IP</th>
+                              <th>TLS Port</th>
+                              <th>Xbus Port</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>Requestor1</td>
+                              <td>10.0.01</td>
+                              <td>56661</td>
+                              <td>56661</td>
+                            </tr>
+                            <tr>
+                              <td>Requestor2</td>
+                              <td>10.0.01</td>
+                              <td>56662</td>
+                              <td>56661</td>
+                            </tr>
+                            <tr>
+                              <td>Requestor3</td>
+                              <td>10.0.01</td>
+                              <td>56663</td>
+                              <td>56661</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                
+                
+                
+                
+                
+                        <p><b>Dakota Configuration</b></p>
+                
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>Requestor Name</th>
+                              <th>IP</th>
+                              <th>TLS Port</th>
+                              <th>Xbus Port</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                
+                          </tbody>
+                        </table>
+                
+                
+                
+                        <p><b>EA Configuration</b></p>
+                        <input type="radio" name="gender" value="male" checked> Secure
+                        <input type="radio" name="gender" value="male"> Compatible<br>
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>Requestor Name</th>
+                              <th>IP</th>
+                              <th>TLS Port</th>
+                              <th>Xbus Port</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                
+                          </tbody>
+                        </table>
+                
+                
+                
+                        <p>Archive Configuration</p>
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th></th>
+                              <th>Archive Name</th>
+                              <th>AE Title</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                
+                              <td></td>
+                              <td>Archive Name</td>
+                              <td>AE Title</td>
+                            </tr>
+                
+                
+                          </tbody>
+                        </table>
+                
+                        <table class="table table-bordered">
+                          <thead>
+                            <tr>
+                              <th>DB Host Name</th>
+                              <th>DB Port</th>
+                              <th>User Name</th>
+                              <th>Password</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                            </tr>
+                
+                
+                          </tbody>
+                        </table>
+                        <input type="checkbox" name="gender" value="male"> Direct SQL Access
+                  </div>
+            </div>
+              </div>
 
 
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="XE Service">
+      <ng-template ngbTabContent>
+        <p>Raw denim you probably haven't heard of them jean shorts Austin. Nesciunt tofu stumptown aliqua, retro synth
+        master cleanse. Mustache cliche tempor, williamsburg carles vegan helvetica. Reprehenderit butcher retro keffiyeh
+        dreamcatcher synth. Cosby sweater eu banh mi, qui irure terry richardson ex squid. Aliquip placeat salvia cillum
+        iphone. Seitan aliquip quis cardigan american apparel, butcher voluptate nisi qui.</p>
+      </ng-template>
+    </ngb-tab>
+    <ngb-tab title="XE Service" [disabled]="true">
+      <ng-template ngbTabContent>
+        <p>Sed commodo, leo at suscipit dictum, quam est porttitor sapien, eget sodales nibh elit id diam. Nulla facilisi. Donec egestas ligula vitae odio interdum aliquet. Duis lectus turpis, luctus eget tincidunt eu, congue et odio. Duis pharetra et nisl at faucibus. Quisque luctus pulvinar arcu, et molestie lectus ultrices et. Sed diam urna, egestas ut ipsum vel, volutpat volutpat neque. Praesent fringilla tortor arcu. Vivamus faucibus nisl enim, nec tristique ipsum euismod facilisis. Morbi ut bibendum est, eu tincidunt odio. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Mauris aliquet odio ac lorem aliquet ultricies in eget neque. Phasellus nec tortor vel tellus pulvinar feugiat.</p>
+      </ng-template>
+    </ngb-tab>
+  </ngb-tabset>
+  
 
-      <div class="col-sm-5">
-        <p>Requestor Configuration</p>
-        <input type="checkbox" name="gender" value="male"> Enable Secure Connection(TLS)
-        <input type="checkbox" name="gender" value="male" checked> Enable Proxy<br>
-        <!--     Dialog Box for Requestor-->
-        <ng-template #content let-c="close" let-d="dismiss">
-          <div class="modal-header">
-            <h4 class="modal-title" id="modal-basic-title">Hi there!</h4>
-            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-              <span aria-hidden="true">&times;</span>
-            </button>
-          </div>
-          <div class="modal-body">
-            <p>Hello, World!</p>
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-outline-dark" (click)="c('Save click')">Save</button>
-          </div>
-        </ng-template>
-        <button class="btn btn-primary" (click)="openDialog(content)">Requestor1</button>
+  
 
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Requestor Name</th>
-              <th>IP</th>
-              <th>TLS Port</th>
-              <th>Xbus Port</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Requestor1</td>
-              <td>10.0.01</td>
-              <td>56661</td>
-              <td>56661</td>
-            </tr>
-            <tr>
-              <td>Requestor2</td>
-              <td>10.0.01</td>
-              <td>56662</td>
-              <td>56661</td>
-            </tr>
-            <tr>
-              <td>Requestor3</td>
-              <td>10.0.01</td>
-              <td>56663</td>
-              <td>56661</td>
-            </tr>
-          </tbody>
-        </table>
-
-
-
-
-
-        <p>Dakota Configuration</p>
-
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Requestor Name</th>
-              <th>IP</th>
-              <th>TLS Port</th>
-              <th>Xbus Port</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-
-          </tbody>
-        </table>
-
-
-
-        <p>EA Configuration</p>
-        <input type="radio" name="gender" value="male" checked> Secure
-        <input type="radio" name="gender" value="male"> Compatible<br>
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>Requestor Name</th>
-              <th>IP</th>
-              <th>TLS Port</th>
-              <th>Xbus Port</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-
-          </tbody>
-        </table>
-
-
-
-        <p>Archive Configuration</p>
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th></th>
-              <th>Archive Name</th>
-              <th>AE Title</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-
-              <td></td>
-              <td>Archive Name</td>
-              <td>AE Title</td>
-            </tr>
-
-
-          </tbody>
-        </table>
-
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>DB Host Name</th>
-              <th>DB Port</th>
-              <th>User Name</th>
-              <th>Password</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td></td>
-              <td></td>
-              <td></td>
-              <td></td>
-            </tr>
-
-
-          </tbody>
-        </table>
-        <input type="checkbox" name="gender" value="male"> Direct SQL Access
-      </div>
-
-
-
-
-
-
-
-
-    </div>
-    <div id="menu1" class="tab-pane fade">
-      <h3>Menu 1</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-      <h3>Menu 2</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-        aperiam.</p>
-    </div>
-    <div id="menu3" class="tab-pane fade">
-      <h3>Menu 3</h3>
-      <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
-    </div>
-  </div>
+  
 </div>
 
-<script>
-  $(document).ready(function () {
-    $(".nav-tabs a").click(function () {
-      $(this).tab('show');
-    });
-  });
-</script>
 
 
-
-<!-- you need to include the ShieldUI CSS and JS assets in order for the TreeView widget to work -->
-<link rel="stylesheet" type="text/css"
-  href="http://www.shieldui.com/shared/components/latest/css/light-bootstrap/all.min.css" />
-<script type="text/javascript" src="http://www.shieldui.com/shared/components/latest/js/shieldui-all.min.js"></script>
-
-<script type="text/javascript">
-  jQuery(function ($) {
-    $("#treeview").shieldTreeView();
-  });
-</script>
-
-<!-- <div class="form-group">
-  <label for="providername">Provider Name</label>
-  <input type="text" id="providername" name="providername" class="form-control ">
-</div> -->
 
